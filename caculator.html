@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input {
+color:black; 
+	 font-style: italic;
+	text-align: center
+
+}
+	</style>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta charset="utf-8">
+	<title>MRHQ CALCULATOR</title>
+</head>
+<body>
+	<h1>Mission Ready Hq</h1>
+<h2> this web page is for profit calculation</h2>
+<a href="https://www.missionreadyhq.com/">link to MRHQ</a>
+
+<p> HERE YOU CAN CALCULATE INSTANTLY YOUR PROFIT  </p>
+<input type="number" id="num" placeholder="UNIVERSITY">
+<input type="number" id="num1" placeholder="MRHQ">
+<button onclick="calculate()">Calculate</button>
+<span id="msg"></span>
+<script>
+	function calculate() {
+		var cost = document.getElementById("num").value;
+		var sell = document.getElementById("num1").value;
+		var a = sell-cost
+		var b = cost-sell
+		if (sell>cost)
+			document.getElementById("msg").innerHTML="The profit is "+a;
+		 else if (sell<cost)
+		 	document.getElementById("msg").innerHTML="The loss is "+b;
+		 else document.getElementById("msg").innerHTML="No profit , no loss ";
+		}
+
+</script>	
+</body>
+</html>
